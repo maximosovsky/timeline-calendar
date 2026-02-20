@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wayfinding.pro / Planner 2</title>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.4/pdfmake.min.js'></script>
+<script src='js/vfs_fonts.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+<script src="https://unpkg.com/dayjs@1.10.7/dayjs.min.js"></script>
+<script src="https://unpkg.com/dayjs@1.10.7/locale/ru.js"></script>
+<script src="https://unpkg.com/dayjs@1.10.7/plugin/localeData.js"></script>
+<script src="https://unpkg.com/dayjs@1.10.7/plugin/isoWeek.js"></script>
+<script src="https://unpkg.com/pdfobject@2.2.7/pdfobject.min.js"></script>
+<script src='https://cdn.rawgit.com/anvaka/query-state/v4.0.0/dist/query-state.min.js'></script>
+<style>
+	html,body {
+		margin:0;
+		padding:0;
+		height:100%;
+		overflow: hidden;}
+	body {
+		background-color: rgba(0, 0, 0, 0.032);
+	}
+	#pdfV {
+		width:100%;
+		height:100%;
+		border:0;
+		margin:0;
+		/* border: solid 1px rgba(0, 0, 0, 0.075);
+		border-radius: 4px;
+		box-shadow:
+			0px 3.3px 5.3px rgba(0, 0, 0, 0.032),
+			0px 11.2px 17.9px rgba(0, 0, 0, 0.048),
+			0px 50px 80px rgba(0, 0, 0, 0.08)
+		; */
+		}
+</style>
+</head>
+<body>
+<div id="pdfV">...</div>
+
+<script>
+	var b64 = "";
+	var qs = queryState({d:3,g:10,l:'ru'}, { useSearch: true });
+	var appState = qs.get();
+</script>
+<script src="js/app.js" type="module" charset="utf-8"></script>
+</body>
+</html>
